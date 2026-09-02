@@ -654,7 +654,10 @@ return {
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
+    lazy = false,
+    branch = 'master',
     build = ':TSUpdate',
+    main = 'nvim-treesitter.configs',
     opts = {
       ensure_installed = {
         'bash',

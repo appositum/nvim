@@ -543,6 +543,7 @@ return {
         lua = { 'stylua' },
         python = { 'ruff format' },
         haskell = { 'ormolu' },
+        rust = { 'rustfmt' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --

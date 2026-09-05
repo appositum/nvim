@@ -710,6 +710,7 @@ return {
     lazy = false,
     keys = {
       { '\\', ':Neotree reveal right<CR>', desc = 'NeoTree reveal', silent = true },
+      { '<C-\\>', ':Neotree reveal left<CR>', desc = 'NeoTree reveal', silent = true },
     },
     opts = {
       window = {

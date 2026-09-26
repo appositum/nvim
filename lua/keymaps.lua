@@ -56,10 +56,13 @@ vim.keymap.set('i', '<C-b>', '<Left>', { desc = 'Move backward by char (insert m
 
 vim.keymap.set('i', '<A-f>', '<S-Right>', { desc = 'Move foward by word (insert mode)' })
 vim.keymap.set('i', '<A-b>', '<S-Left>', { desc = 'Move backward by word (insert mode)' })
+vim.keymap.set('i', '<A-d>', '<C-o>"_dw', { desc = 'Delete next word (insert mode)' }) -- opposite of Ctrl + W
 
 vim.keymap.set('i', '<C-a>', '<Esc>I', { desc = 'Go to line start (insert mode)' })
 vim.keymap.set('i', '<C-e>', '<End>', { desc = 'Go to line end (insert mode)' })
 vim.keymap.set('i', '<C-d>', '<Delete>', { desc = 'Delete (insert mode)' }) -- opposite of Ctrl + H
+vim.keymap.set('i', '<C-k>', '<C-o>"_D', { desc = 'Delete from cursor to line end (insert mode)' }) -- opposite of Ctrl + U
+
 vim.keymap.set('v', '<', '<gv', { desc = 'Indent line' })
 vim.keymap.set('v', '>', '>gv', { desc = 'Indent line' })
 

@@ -1219,7 +1219,8 @@ return {
             fg = '#7E9CD8', -- kanagawa
           },
         },
-        options = {},
+        options = {
+        },
       }
     end,
   },

@@ -7,11 +7,11 @@ return {
       require('kanagawa').setup({
         colors = {
           theme = {
-            wave = {
+            all = {
               ui = {
                 bg_gutter = "none"
               }
-            }
+            },
           }
         }
       })

@@ -1191,29 +1191,29 @@ return {
       local bufferline = require 'bufferline'
       bufferline.setup {
         highlights = {
-          fill = {
-            -- bg = '#181825', -- catppuccin
-            bg = '#16161D' -- kanagawa
-          },
-          background = {
-            bg = '#16161D' -- kanagawa
-          },
-          separator = {
-            bg = '#16161D' -- kanagawa
-          },
-          close_button = {
-            bg = '#16161D' -- kanagawa
-          },
-          tab_selected = {
-            -- bg = '#fab387', -- catppuccin
-            -- fg = '#181825', -- catppuccin
-            bg = '#FFA066', -- kanagawa
-            fg = '#16161D', -- kanagawa
-          },
-          tab_separator_selected = {
-            -- bg = '#fab387', -- catppuccin
-            bg = '#FFA066', -- kanagawa
-          },
+          -- fill = {
+          --   -- bg = '#181825', -- catppuccin
+          --   bg = '#16161D' -- kanagawa
+          -- },
+          -- background = {
+          --   bg = '#16161D' -- kanagawa
+          -- },
+          -- separator = {
+          --   bg = '#16161D' -- kanagawa
+          -- },
+          -- close_button = {
+          --   bg = '#16161D' -- kanagawa
+          -- },
+          -- tab_selected = {
+          --   -- bg = '#fab387', -- catppuccin
+          --   -- fg = '#181825', -- catppuccin
+          --   bg = '#FFA066', -- kanagawa
+          --   fg = '#16161D', -- kanagawa
+          -- },
+          -- tab_separator_selected = {
+          --   -- bg = '#fab387', -- catppuccin
+          --   bg = '#FFA066', -- kanagawa
+          -- },
           indicator_selected = {
             -- fg = '#b4befe', -- catppuccin
             fg = '#7E9CD8', -- kanagawa

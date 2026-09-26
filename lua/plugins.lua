@@ -68,21 +68,22 @@ return {
           F12 = '<F12>',
         },
       },
-      -- keys = {
-      --   {
-      --     '<leader>?',
-      --     function()
-      --       require('which-key').show { global = false }
-      --     end,
-      --     desc = 'buffer local keymaps',
-      --   },
-      -- },
 
       -- Document existing key chains
       spec = {
         { '<leader>f', group = '[F]uzzy' },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+      },
+    },
+
+    keys = {
+      {
+        '<leader>?',
+        function()
+          require('which-key').show({ global = false })
+        end,
+        desc = 'buffer local keymaps',
       },
     },
   },

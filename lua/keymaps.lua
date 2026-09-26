@@ -50,9 +50,8 @@ vim.keymap.set('i', '<A-h>', '<Left>', { desc = 'Move left (insert mode)' })
 vim.keymap.set('i', '<A-l>', '<Right>', { desc = 'Move right (insert mode)' })
 vim.keymap.set('i', '<A-j>', '<Down>', { desc = 'Move down (insert mode)' })
 vim.keymap.set('i', '<A-k>', '<Up>', { desc = 'Move up (insert mode)' })
-vim.keymap.set('i', '<C-d>', '<Delete>', { desc = 'Delete in insert mode' })
-vim.keymap.set('i', '<C-x>', '<Backspace>', { desc = 'Backspace in insert mode' })
 
+vim.keymap.set('i', '<C-d>', '<Delete>', { desc = 'Delete (insert mode)' }) -- opposite of Ctrl + H
 vim.keymap.set('v', '<', '<gv', { desc = 'Indent line' })
 vim.keymap.set('v', '>', '>gv', { desc = 'Indent line' })
 

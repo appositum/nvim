@@ -60,7 +60,7 @@ vim.keymap.set('x', 'p', 'P', { desc = 'Paste without yanking in visual mode' })
 
 vim.keymap.set('n', '<leader>l', function()
   vim.diagnostic.open_float()
-end)
+end, { desc = 'Open diagnostic floating window' })
 
 vim.keymap.set('n', 'L', function()
   vim.diagnostic.config { virtual_lines = { current_line = true }, virtual_text = false }
@@ -72,4 +72,4 @@ vim.keymap.set('n', 'L', function()
       return true
     end,
   })
-end)
+end, { desc = 'Open diagnostic line' })

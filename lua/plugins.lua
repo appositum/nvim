@@ -307,18 +307,18 @@ return {
 
           -- Rename the variable under your cursor.
           --  Most Language Servers support renaming across files, etc.
-          map('gln', vim.lsp.buf.rename, '[R]e[n]ame')
+          map('gln', vim.lsp.buf.rename, 'Re[n]ame')
 
           -- Execute a code action, usually your cursor needs to be on top of an error
           -- or a suggestion from your LSP for this to activate.
-          map('gla', vim.lsp.buf.code_action, '[G]oto Code [A]ction', { 'n', 'x' })
+          map('gla', vim.lsp.buf.code_action, '[G]oto code [a]ction', { 'n', 'x' })
 
           -- Find references for the word under your cursor.
-          map('glr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+          map('glr', require('telescope.builtin').lsp_references, '[G]oto [r]eferences')
 
           -- Jump to the implementation of the word under your cursor.
           --  Useful when your language has ways of declaring types without an actual implementation.
-          map('gli', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
+          map('gli', require('telescope.builtin').lsp_implementations, '[G]oto [i]mplementation')
 
           -- Jump to the definition of the word under your cursor.
           --  This is where a variable was first declared, or where a function is defined, etc.
@@ -340,7 +340,7 @@ return {
           -- Jump to the type of the word under your cursor.
           --  Useful when you're not sure what type a variable is and you want to see
           --  the definition of its *type*, not where it was *defined*.
-          map('glt', require('telescope.builtin').lsp_type_definitions, '[G]oto [T]ype Definition')
+          map('glt', require('telescope.builtin').lsp_type_definitions, '[G]oto [t]ype definition')
 
           -- This function resolves a difference between neovim nightly (version 0.11) and stable (version 0.10)
           ---@param client vim.lsp.Client

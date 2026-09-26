@@ -46,10 +46,10 @@ vim.keymap.set('n', '<leader>"', 'cw"<Esc>pa"<Esc>', { desc = 'Wrap next word in
 vim.keymap.set('n', '<leader>r', ':FTermRun ', { desc = 'Run command in floating terminal' })
 vim.keymap.set('n', ';', ':')
 
-vim.keymap.set('i', '<C-h>', '<Left>', { desc = 'Move left' })
-vim.keymap.set('i', '<C-l>', '<Right>', { desc = 'Move right' })
-vim.keymap.set('i', '<C-j>', '<Down>', { desc = 'Move down' })
-vim.keymap.set('i', '<C-k>', '<Up>', { desc = 'Move up' })
+vim.keymap.set('i', '<A-h>', '<Left>', { desc = 'Move left (insert mode)' })
+vim.keymap.set('i', '<A-l>', '<Right>', { desc = 'Move right (insert mode)' })
+vim.keymap.set('i', '<A-j>', '<Down>', { desc = 'Move down (insert mode)' })
+vim.keymap.set('i', '<A-k>', '<Up>', { desc = 'Move up (insert mode)' })
 vim.keymap.set('i', '<C-d>', '<Delete>', { desc = 'Delete in insert mode' })
 vim.keymap.set('i', '<C-x>', '<Backspace>', { desc = 'Backspace in insert mode' })
 

@@ -600,8 +600,6 @@ return {
         -- For an understanding of why the 'default' preset is recommended,
         -- you will need to read `:help ins-completion`
         --
-        -- No, but seriously. Please read `:help ins-completion`, it is really good!
-        --
         -- All presets have the following mappings:
         -- <tab>/<s-tab>: move to right/left of your snippet expansion
         -- <c-space>: Open menu or open docs if already open
@@ -611,6 +609,7 @@ return {
         --
         -- See :h blink-cmp-config-keymap for defining your own keymap
         preset = 'default',
+        ['<C-enter>'] = { 'accept' },
         ['<C-k>'] = false,
         ['<C-t>'] = { 'show_signature', 'hide_signature', 'fallback' },
 
@@ -628,6 +627,13 @@ return {
         -- By default, you may press `<c-space>` to show the documentation.
         -- Optionally, set `auto_show = true` to show the documentation after a delay.
         documentation = { auto_show = false, auto_show_delay_ms = 500 },
+
+        list = {
+          selection = {
+            -- disable accepting a completion suggestion when cycling through the options
+            auto_insert = false,
+          }
+        }
       },
 
       sources = {

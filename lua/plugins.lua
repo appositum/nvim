@@ -974,13 +974,16 @@ return {
                 -- p = full path
                 -- h = head (remove last component (filename))
                 -- t = tail (last component only)
-                local cwd_name = vim.fn.expand '%:p:~:h:t'
+                local cwd = vim.fn.getcwd()
 
-                if cwd_name == '~' then
+                if cwd == vim.fn.expand("$HOME") then
                   return ''
                 end
 
-                if cwd_name == '' then
+                local sep = package.config:sub(1, 1)
+                local cwd_name = cwd:match("([^" .. sep .. "/]+)$")
+
+                if cwd == '/' then
                   cwd_name = 'root'
                 end
 

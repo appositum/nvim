@@ -868,7 +868,7 @@ return {
             {
               'mode',
               fmt = function(s)
-                return ' ' .. (MODE_MAP[s] or s)
+                return ' ' .. (MODE_MAP[s] or s)
               end,
             },
           },
@@ -904,6 +904,7 @@ return {
           lualine_c = {
             {
               'branch',
+              icon = '',
               component_separators = '',
             },
             {

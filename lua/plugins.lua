@@ -719,7 +719,11 @@ return {
     "lukas-reineke/indent-blankline.nvim",
     -- See `:help ibl`
     main = "ibl",
-    opts = {},
+    opts = {
+      indent = {
+        char = "▏",
+      },
+    },
   },
   {
     "windwp/nvim-autopairs",

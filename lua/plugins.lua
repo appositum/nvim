@@ -980,20 +980,14 @@ return {
             },
           },
           lualine_y = {
-            { -- session name
+            { -- current working directory name for the buffer, or session name if it exists
               function()
-                local session_name = require("auto-session.lib").current_session_name(true)
-                local session = session_name == "" and session_name or " " .. session_name
-                --  󰉖  󰉋 󰉓 
-                return session
-              end,
-            },
-            { -- current working directory name for the buffer
-              function()
-                -- % = current buffer
-                -- p = full path
-                -- h = head (remove last component (filename))
-                -- t = tail (last component only)
+                local session = require("auto-session.lib").current_session_name(true)
+
+                if session ~= "" then
+                  return " " .. session
+                end
+
                 local cwd = vim.fn.getcwd()
 
                 if cwd == vim.fn.expand("$HOME") then

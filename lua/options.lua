@@ -2,7 +2,7 @@ vim.o.number = true
 vim.o.relativenumber = true
 
 -- can be useful for resizing using the cursor
-vim.o.mouse = 'a'
+vim.o.mouse = "a"
 
 -- Don't show the mode, since it's already in the status line
 vim.o.showmode = false
@@ -13,7 +13,7 @@ vim.o.showmode = false
 --  See `:help 'clipboard'`
 vim.schedule(function()
   -- remember to install `xclip` or other clipboard provider
-  vim.o.clipboard = 'unnamedplus'
+  vim.o.clipboard = "unnamedplus"
 end)
 
 vim.o.breakindent = true
@@ -26,7 +26,7 @@ vim.o.undofile = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
-vim.o.signcolumn = 'yes'
+vim.o.signcolumn = "yes"
 vim.o.updatetime = 250
 
 -- Decrease mapped sequence wait time
@@ -44,10 +44,10 @@ vim.o.splitbelow = true
 --   See `:help lua-options`
 --   and `:help lua-options-guide`
 vim.o.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Preview substitutions live, as you type
-vim.o.inccommand = 'split'
+vim.o.inccommand = "split"
 
 vim.o.cursorline = true
 
@@ -59,7 +59,7 @@ vim.o.scrolloff = 5
 -- See `:help 'confirm'`
 vim.o.confirm = true
 
-vim.o.encoding = 'utf8'
+vim.o.encoding = "utf8"
 vim.o.expandtab = true -- spaces when pressing tab
 vim.o.tabstop = 4
 vim.o.softtabstop = 2

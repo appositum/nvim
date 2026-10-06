@@ -64,3 +64,5 @@ vim.o.expandtab = true -- spaces when pressing tab
 vim.o.tabstop = 4
 vim.o.softtabstop = 2
 vim.o.shiftwidth = 4
+
+vim.opt.foldlevelstart = 99

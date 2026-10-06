@@ -26,6 +26,33 @@ vim.api.nvim_create_autocmd({ "InsertLeave" }, {
   end,
 })
 
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = {
+    "bash",
+    "c",
+    "diff",
+    "elixir",
+    "haskell",
+    "html",
+    "javascript",
+    "lua",
+    "luadoc",
+    "markdown",
+    "markdown_inline",
+    "python",
+    "rust",
+    "typescript",
+    "vim",
+    "vimdoc",
+  },
+  callback = function(args)
+    vim.treesitter.start(args.buf)
+    vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    vim.wo.foldmethod = "expr"
+    vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+  end,
+})
+
 local function split(s)
   local res = {}
 

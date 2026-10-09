@@ -71,6 +71,9 @@ vim.keymap.set("i", "<C-k>", '<C-o>"_D', { desc = "Delete from cursor to line en
 vim.keymap.set("v", "<", "<gv", { desc = "Indent line" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent line" })
 
+vim.keymap.set("v", "<leader>'", "\"zc'<Esc>\"zpa'<Esc>", { desc = "Wrap next word in single quotes" })
+vim.keymap.set("v", '<leader>"', '"zc"<Esc>"zpa"<Esc>', { desc = "Wrap next word in double quotes" })
+
 vim.keymap.set("x", "p", "P", { desc = "Paste without yanking in visual mode" })
 
 vim.keymap.set("n", "<leader>l", function()

@@ -16,8 +16,8 @@ vim.api.nvim_create_autocmd({ "InsertEnter" }, {
 
 vim.api.nvim_create_autocmd({ "InsertLeave" }, {
   callback = function(ev)
-    -- remove line numbers in lazygit window
     if string.match(ev.file, "lazygit$") then
+      -- remove line numbers in lazygit window
       vim.o.relativenumber = false
       vim.o.number = false
     else

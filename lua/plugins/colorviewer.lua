@@ -1,8 +1,11 @@
 return {
-  "Godswill-255/colorviewer.nvim",
+  "appositum/colorviewer.nvim",
   config = function()
     require("colorviewer").setup({
       symbol = "■",
+      highlight = {
+        names = false,
+      },
     })
   end,
 }

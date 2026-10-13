@@ -25,19 +25,6 @@ return {
 
         map("gln", vim.lsp.buf.rename, "Re[n]ame")
         map("gla", vim.lsp.buf.code_action, "[G]oto code [a]ction", { "n", "x" })
-        map("glr", require("telescope.builtin").lsp_references, "[G]oto [r]eferences")
-        map("gli", require("telescope.builtin").lsp_implementations, "[G]oto [i]mplementation")
-
-        -- To jump back, press <C-t>.
-        map("gld", require("telescope.builtin").lsp_definitions, "[G]oto [d]efinition")
-
-        -- WARN: This is not Goto Definition, this is Goto Declaration.
-        --  For example, in C this would take you to the header.
-        map("glD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
-
-        map("gO", require("telescope.builtin").lsp_document_symbols, "Open Document Symbols")
-        map("gW", require("telescope.builtin").lsp_dynamic_workspace_symbols, "Open Workspace Symbols")
-        map("glt", require("telescope.builtin").lsp_type_definitions, "[G]oto [t]ype definition")
 
         -- This function resolves a difference between neovim nightly (version 0.11) and stable (version 0.10)
         ---@param client vim.lsp.Client
@@ -100,7 +87,6 @@ return {
       end,
     })
 
-    -- Diagnostic Config
     -- See :help vim.diagnostic.Opts
     vim.diagnostic.config({
       severity_sort = true,
@@ -139,7 +125,6 @@ return {
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
       clangd = {},
-      -- gopls = {},
       pyright = {},
       rust_analyzer = {},
       elixirls = {},

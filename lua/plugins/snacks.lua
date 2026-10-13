@@ -179,5 +179,49 @@ return {
       end,
       desc = "[f]uzzy current [w]ord",
     },
+
+    -- LSP
+    {
+      "gld", function()
+        -- To jump back, press <C-t>.
+        Snacks.picker.lsp_definitions()
+      end, desc = "[g]oto [d]efinition"
+    },
+    {
+      "glD", function()
+        Snacks.picker.lsp_declarations()
+      end, desc = "[g]oto [D]eclaration"
+    },
+    {
+      "gli", function()
+        Snacks.picker.lsp_implementations({
+          focus = "list"
+        })
+      end, desc = "[g]oto [i]mplementation"
+    },
+    {
+      "glO", function()
+        Snacks.picker.lsp_symbols()
+      end, desc = "Open document symbols"
+    },
+    {
+      "glr", function()
+        Snacks.picker.lsp_references({
+          focus = "list"
+        })
+      end, desc = "[g]oto [r]eferences"
+    },
+    {
+      "glt", function()
+        Snacks.picker.lsp_type_definitions({
+          focus = "list"
+        })
+      end, desc = "[g]oto [t]ype definition"
+    },
+    {
+      "glW", function()
+        Snacks.picker.lsp_workspace_symbols()
+      end, desc = "Open workspace symbols"
+    },
   },
 }

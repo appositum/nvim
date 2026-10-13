@@ -99,3 +99,14 @@ vim.keymap.set("n", "L", function()
     end,
   })
 end, { desc = "Open diagnostic line" })
+
+-- in visual mode, search for the selected text with fuzzy live grep
+vim.keymap.set("v", "<C-f>", function()
+  vim.cmd('normal! "zy')
+  local register = vim.fn.getreg("z")
+
+  require("snacks").picker.grep({
+    search = register,
+    focus = "list" -- open in normal mode
+  })
+end, { desc = "Fuzzy find selected text in live grep", noremap = true, silent = true })

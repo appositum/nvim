@@ -58,7 +58,7 @@ return {
     {
       "\\",
       function()
-        Snacks.picker.explorer({
+        Snacks.explorer({
           layout = {
             layout = {
               width = 30,
@@ -70,11 +70,10 @@ return {
       end,
       desc = "Open explorer (right)",
     },
-
     {
       "<C-\\>",
       function()
-        require("snacks").picker.explorer({
+        Snacks.explorer({
           layout = {
             layout = {
               width = 30,
@@ -85,6 +84,100 @@ return {
         })
       end,
       desc = "Open explorer (left)",
+    },
+
+    -- Fuzzy finder
+    {
+      "<leader><leader>",
+      function()
+        Snacks.picker.buffers({
+          focus = "list", -- open in normal mode
+          win = {
+            input = {
+              keys = {
+                ["<leader>d"] = "bufdelete"
+              },
+            },
+          }
+        })
+      end,
+      desc = '[ ] fuzzy open buffers',
+    },
+    {
+      "<leader>f?",
+      function()
+        Snacks.picker.help()
+      end,
+      desc = "[f]uzzy help",
+    },
+    {
+      "<leader>fd",
+      function()
+        Snacks.picker.diagnostics({
+          focus = "list",
+        })
+      end,
+      desc = "[f]uzzy [d]iagnostics",
+    },
+    {
+      "<leader>ff",
+      function()
+        Snacks.picker.files()
+      end,
+      desc = "[f]uzzy [f]iles",
+    },
+    {
+      "<leader>fg",
+      function()
+        Snacks.picker.git_log()
+      end,
+      desc = "[f]uzzy [g]it log",
+    },
+    {
+      "<leader>fk",
+      function()
+        Snacks.picker.keymaps()
+      end,
+      desc = "[f]uzzy [k]eymaps",
+    },
+    {
+      "<leader>fl",
+      function()
+        Snacks.picker.grep()
+      end,
+      desc = "[f]uzzy [l]ive grep",
+    },
+    {
+      "<leader>fr",
+      function()
+        Snacks.picker.recent({
+          focus = "list",
+        })
+      end,
+      desc = '[f]uzzy [r]ecent files',
+    },
+    {
+      "<leader>fR",
+      function()
+        Snacks.picker.resume()
+      end,
+      desc = "[f]uzzy [R]esume",
+    },
+    {
+      "<leader>fs",
+      function()
+        Snacks.picker.lines()
+      end,
+      desc = "[f]uzzy [s]earch current buffer"
+    },
+    {
+      "<leader>fw",
+      function()
+        Snacks.picker.grep_word({
+          focus = "list",
+        })
+      end,
+      desc = "[f]uzzy current [w]ord",
     },
   },
 }

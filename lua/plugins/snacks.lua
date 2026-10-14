@@ -86,13 +86,13 @@ return {
           win = {
             input = {
               keys = {
-                ["<leader>d"] = "bufdelete"
+                ["<leader>d"] = "bufdelete",
               },
             },
-          }
+          },
         })
       end,
-      desc = '[ ] fuzzy open buffers',
+      desc = "[ ] fuzzy open buffers",
     },
     {
       "<leader>f?",
@@ -145,7 +145,7 @@ return {
           focus = "list",
         })
       end,
-      desc = '[f]uzzy [r]ecent files',
+      desc = "[f]uzzy [r]ecent files",
     },
     {
       "<leader>fR",
@@ -159,7 +159,7 @@ return {
       function()
         Snacks.picker.lines()
       end,
-      desc = "[f]uzzy [s]earch current buffer"
+      desc = "[f]uzzy [s]earch current buffer",
     },
     {
       "<leader>fw",
@@ -173,46 +173,60 @@ return {
 
     -- LSP
     {
-      "gld", function()
+      "gld",
+      function()
         -- To jump back, press <C-t>.
         Snacks.picker.lsp_definitions()
-      end, desc = "[g]oto [d]efinition"
+      end,
+      desc = "[g]oto [d]efinition",
     },
     {
-      "glD", function()
+      "glD",
+      function()
         Snacks.picker.lsp_declarations()
-      end, desc = "[g]oto [D]eclaration"
+      end,
+      desc = "[g]oto [D]eclaration",
     },
     {
-      "gli", function()
+      "gli",
+      function()
         Snacks.picker.lsp_implementations({
-          focus = "list"
+          focus = "list",
         })
-      end, desc = "[g]oto [i]mplementation"
+      end,
+      desc = "[g]oto [i]mplementation",
     },
     {
-      "glO", function()
+      "glO",
+      function()
         Snacks.picker.lsp_symbols()
-      end, desc = "Open document symbols"
+      end,
+      desc = "Open document symbols",
     },
     {
-      "glr", function()
+      "glr",
+      function()
         Snacks.picker.lsp_references({
-          focus = "list"
+          focus = "list",
         })
-      end, desc = "[g]oto [r]eferences"
+      end,
+      desc = "[g]oto [r]eferences",
     },
     {
-      "glt", function()
+      "glt",
+      function()
         Snacks.picker.lsp_type_definitions({
-          focus = "list"
+          focus = "list",
         })
-      end, desc = "[g]oto [t]ype definition"
+      end,
+      desc = "[g]oto [t]ype definition",
     },
     {
-      "glW", function()
+      "glW",
+      function()
         Snacks.picker.lsp_workspace_symbols()
-      end, desc = "Open workspace symbols"
+      end,
+      desc = "Open workspace symbols",
     },
   },
 }

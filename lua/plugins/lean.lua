@@ -15,9 +15,4 @@ return {
     -- 'andrewradev/switch.vim',        -- for switch support
     -- 'tomtom/tcomment_vim',           -- for commenting
   },
-
-  ---@type lean.Config
-  opts = {
-    mappings = true,
-  },
 }

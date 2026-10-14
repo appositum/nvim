@@ -1,12 +1,13 @@
 return {
   "folke/snacks.nvim",
+  lazy = false,
   ---@type snacks.Config
   opts = {
     bigfile = { enabled = true },
+    gh = { enabled = true },
     explorer = {
       replace_netrw = true,
     },
-    gh = { enabled = true },
     picker = {
       sources = {
         explorer = {
@@ -58,15 +59,7 @@ return {
     {
       "\\",
       function()
-        Snacks.explorer({
-          layout = {
-            layout = {
-              width = 30,
-              min_width = 30,
-              position = "right",
-            },
-          },
-        })
+        Snacks.explorer()
       end,
       desc = "Open explorer (right)",
     },
@@ -76,8 +69,6 @@ return {
         Snacks.explorer({
           layout = {
             layout = {
-              width = 30,
-              min_width = 30,
               position = "left",
             },
           },

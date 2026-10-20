@@ -46,7 +46,13 @@ vim.api.nvim_create_autocmd("FileType", {
     "vimdoc",
   },
   callback = function(args)
-    vim.treesitter.start(args.buf)
+    local ok, err = pcall(vim.treesitter.start, args.buf)
+
+    -- install parser if `start` fails
+    if not ok then
+      vim.cmd { cmd = "TSInstall", args = { vim.bo.filetype } }
+    end
+
     vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
     vim.wo.foldmethod = "expr"
     vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"

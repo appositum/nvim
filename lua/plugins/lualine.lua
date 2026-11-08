@@ -127,11 +127,11 @@ return {
 
               return msg
             end,
-            color = function(_section)
-              if next(vim.lsp.get_clients()) == nil then
-                return { fg = "#45475a" }
-              end
-            end,
+            -- color = function(_section)
+            --   if next(vim.lsp.get_clients()) == nil then
+            --     return { fg = "#45475a" }
+            --   end
+            -- end,
           },
         },
         lualine_y = {

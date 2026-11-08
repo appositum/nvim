@@ -1,3 +1,6 @@
+vim.o.guifont = "Mononoki Nerd Font Mono:h16"
+vim.g.neovide_cursor_animation_length = 0.1
+
 vim.o.number = true
 vim.o.relativenumber = true
 

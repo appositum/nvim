@@ -12,12 +12,9 @@ return {
       sources = {
         explorer = {
           layout = {
-            layout = {
-              width = 30,
-              min_width = 30,
-              position = "right",
-            },
+            fullscreen = true,
           },
+          auto_close = true
         },
         gh_issue = {},
         gh_pr = {},
@@ -59,7 +56,17 @@ return {
     {
       "\\",
       function()
-        Snacks.explorer()
+        Snacks.explorer({
+          layout = {
+            layout = {
+              width = 30,
+              min_width = 30,
+              position = "right",
+            },
+            fullscreen = false
+          },
+          auto_close = false
+        })
       end,
       desc = "Open explorer (right)",
     },
@@ -69,12 +76,27 @@ return {
         Snacks.explorer({
           layout = {
             layout = {
+              width = 30,
+              min_width = 30,
               position = "left",
             },
+            fullscreen = false
           },
+          auto_close = false
         })
       end,
       desc = "Open explorer (left)",
+    },
+    {
+      "<leader>e",
+      function()
+        Snacks.explorer({
+          layout = {
+            fullscreen = true,
+          },
+          auto_close = true
+        })
+      end
     },
 
     -- Fuzzy finder
